@@ -5,15 +5,17 @@ module.exports = function() {
       getValue: getValue,
   }
 
+  var obj = {};
+
   function setValue(key, value){
-    var value = key;
+    obj[key] = value;
   }
 
   function getValue(key){
-    if(!!key){
-        return value;
-    }else{
+    if (!key || !obj.hasOwnProperty(key)){
         return null;
+        }else{
+        return obj[key];
+        }
     }
-  }
 };
