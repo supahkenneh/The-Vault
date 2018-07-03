@@ -1,11 +1,11 @@
 'use strict';
 module.exports = function() {
-  return {
-      setValue: setValue,
-      getValue: getValue,
-  }
-
   var obj = {};
+
+    return {
+         setValue: setValue,
+         getValue: getValue,
+    }
 
   function setValue(key, value){
     obj[key] = value;
@@ -14,7 +14,7 @@ module.exports = function() {
   function getValue(key){
     if (!key || !obj.hasOwnProperty(key)){
         return null;
-        }else{
+    }else{
         return obj[key];
         }
     }
